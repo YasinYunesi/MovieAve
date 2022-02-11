@@ -1,0 +1,61 @@
+@import "../../Variables.scss";
+
+.costum_footer {
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+
+  ul {
+    h2 {
+      color: $main_pink;
+    }
+
+    li {
+      color: rgba(255, 255, 255, 0.42);
+      a {
+        color: rgba(255, 255, 255, 0.5);
+        text-decoration: none;
+        transition: $main_transition;
+        &:hover {
+          color: #ffff;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  .footer_dev {
+    span {
+      opacity: 0.4;
+    }
+    a {
+      opacity: 0.5;
+      color: white;
+      transition: $main_transition;
+      &:hover {
+        opacity: 1;
+        color: $main_pink;
+      }
+    }
+  }
+
+  // back to top btn
+  .sp_to_top {
+    transform: translateX(-50%);
+    font-size: 18px;
+    background: black;
+    color: white;
+    opacity: 0.45;
+    border-radius: 0;
+    border-top-right-radius: 50px;
+    border-top-left-radius: 50px;
+    transition: $main_transition;
+    animation: to_bottom 0.5s ease forwards;
+    &:hover {
+      opacity: 0.8;
+      color: white;
+    }
+  }
+  .sp_to_top.active {
+    animation: to_top 0.5s ease forwards;
+  }
+}

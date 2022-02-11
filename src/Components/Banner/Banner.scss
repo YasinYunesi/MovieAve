@@ -1,0 +1,117 @@
+// variables
+@import "../../Variables.scss";
+
+// animations
+@keyframes sk-bounce {
+  0%,
+  100% {
+    transform: scale(0);
+    -webkit-transform: scale(0);
+  }
+  50% {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+  }
+}
+
+// the loading
+.loading_container {
+  background: #444444;
+  height: 1000px;
+
+  .spinner {
+    width: 40px;
+    height: 40px;
+    position: relative;
+    margin: 100px auto;
+
+    .double-bounce1,
+    .double-bounce2 {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      background-color: #fffffff3;
+      opacity: 0.6;
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      -webkit-animation: sk-bounce 2s infinite ease-in-out;
+      animation: sk-bounce 2s infinite ease-in-out;
+    }
+
+    .double-bounce2 {
+      animation-delay: -1s;
+    }
+  }
+}
+
+// the main content
+.home_screen_banner {
+  height: 1000px;
+  color: whitesmoke;
+
+  .banner_content {
+    top: 20%;
+
+    .dark_btn {
+      background: rgba(0, 0, 0, 0.35);
+      color: rgba(255, 255, 255, 0.6);
+      transition: $main_long_transition;
+      @media screen and (max-width: 760px) {
+        width: 50%;
+      }
+      &:hover {
+        background: rgba(0, 0, 0, 1);
+        color: rgba(255, 255, 255, 1);
+      }
+    }
+
+    P {
+      font-size: 17px;
+      line-height: 27px;
+    }
+
+    h4 {
+      font-size: 16px;
+      color: rgba(253, 253, 253, 0.6);
+
+      span {
+        opacity: 0.7;
+        &:not(:last-child) {
+          opacity: 1;
+          font-size: 30px;
+          color: $main_pink;
+          font-weight: bold;
+
+          i {
+            font-size: 20px;
+            color: $main_pink;
+            padding: 10px;
+            border: 4px solid rgba(255, 255, 255, 0.315);
+          }
+        }
+      }
+    }
+
+    .light_btn {
+      color: white;
+      background: #f13340;
+      opacity: 0.8;
+      transition: $main_transition;
+      &:hover {
+        opacity: 1;
+        color: white;
+      }
+    }
+  }
+
+  .banner_top_shadow {
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0));
+    height: 100vh;
+  }
+  .banner_bottom_shadow {
+    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4));
+    height: 100vh;
+  }
+}

@@ -1,0 +1,108 @@
+@import "../../Variables.scss";
+
+.md_left {
+  color: white;
+
+  .md_left_line {
+    color: rgba(255, 255, 255, 0.75);
+  }
+
+  // THE CASTS START
+  .md_left_casts {
+    .md_cast_img {
+      border-radius: 8px;
+      background: url("https://www.exeter.ox.ac.uk/file/2022/01/image-placeholder.jpg") no-repeat center;
+      background-size: cover;
+      @media (min-width: 1800px) {
+        height: 160px;
+      }
+      @media (min-width: 1700px) and (max-width: 1800px) {
+        height: 155px;
+      }
+      @media (min-width: 1600px) and (max-width: 1700px) {
+        height: 145px;
+      }
+      @media (min-width: 1400px) and (max-width: 1600px) {
+        height: 129px;
+      }
+      @media (min-width: 1200px) and (max-width: 1400px) {
+        height: 110px;
+      }
+      @media (min-width: 1100px) and (max-width: 1199px) {
+        height: 197px;
+      }
+      @media (min-width: 1000px) and (max-width: 1100px) {
+        height: 180px;
+      }
+      @media (min-width: 900px) and (max-width: 1000px) {
+        height: 160px;
+      }
+      @media (min-width: 800px) and (max-width: 900px) {
+        height: 140px;
+      }
+      @media (min-width: 768px) and (max-width: 800px) {
+        height: 128px;
+      }
+      @media (min-width: 700px) and (max-width: 767px) {
+        height: 238px;
+      }
+      @media (min-width: 600px) and (max-width: 700px) {
+        height: 200px;
+      }
+      @media (min-width: 500px) and (max-width: 600px) {
+        height: 170px;
+      }
+      @media (min-width: 400px) and (max-width: 500px) {
+        height: 128px;
+      }
+      @media (min-width: 350px) and (max-width: 400px) {
+        height: 120px;
+      }
+      @media (min-width: 300px) and (max-width: 350px) {
+        height: 105px;
+      }
+      @media (min-width: 250px) and (max-width: 300px) {
+        height: 85px;
+      }
+
+      img {
+        border-radius: 6px;
+      }
+    }
+    .md_cast_empty {
+      p {
+        color: rgba(245, 245, 245, 0.8);
+        border-radius: 6px;
+        background: rgba(255, 255, 255, 0.2);
+      }
+    }
+  }
+  // THE CASTS END
+
+  // THE REVIEWS START
+  .md_left_reviews {
+    .md_review {
+      overflow: hidden;
+      background: rgba(255, 255, 255, 0.05);
+      transition: $main_long_transition;
+      &:hover {
+        background: rgba(255, 255, 255, 0.08);
+      }
+
+      h6 {
+        opacity: 0.5;
+      }
+      p {
+        opacity: 0.8;
+      }
+      a {
+        text-decoration: none;
+        color: $main_pink;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+  // THE REVIEWS END
+}

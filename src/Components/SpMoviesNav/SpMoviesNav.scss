@@ -1,0 +1,79 @@
+@import "../../Variables.scss";
+
+// bootstrap reset start
+.modal-open {
+  overflow-y: auto !important;
+  padding-right: 0 !important;
+}
+// bootstrap reset end
+
+.sp_movies_nav {
+  z-index: 10;
+  background: $main_pink;
+  transition: $main_long_transition;
+
+  // search and profile (collapse)
+  .sp_nav_main {
+    background: rgba(255, 255, 255, 0.12);
+
+    .sp_nav_main_links {
+      a {
+        background: transparent;
+        font-size: 18px;
+        color: white;
+        text-decoration: none;
+        transition: $main_transition;
+        &:not(.active):hover {
+          background: rgba(255, 255, 255, 0.02);
+          color: rgba(245, 245, 245, 0.5);
+        }
+        i {
+          font-size: 15px;
+        }
+      }
+    }
+
+    .sp_nav_search {
+      color: rgba(255, 255, 255, 0.7);
+      font-weight: lighter;
+      transition: $main_transition;
+      &:hover {
+        color: white;
+      }
+    }
+    // search modal
+    .sp_search_modal {
+      background-color: rgba(0, 0, 0, 0.5);
+
+      form {
+        input {
+          width: 30vw;
+          transition: $main_long_transition;
+          @media screen and (max-width: 992px) {
+            width: 50vw;
+          }
+          &::placeholder {
+            color: rgb(167, 166, 166);
+          }
+        }
+        button {
+          background-color: $main_pink;
+          width: 12%;
+          opacity: 0.8;
+          border-top-right-radius: 6px;
+          border-bottom-right-radius: 6px;
+          border-top-left-radius: 0;
+          border-bottom-left-radius: 0;
+          transition: $main_transition;
+          &:hover {
+            opacity: 1;
+
+            i {
+              animation: bounce 2s linear infinite;
+            }
+          }
+        }
+      }
+    }
+  }
+}

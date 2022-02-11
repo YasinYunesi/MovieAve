@@ -1,0 +1,45 @@
+@import "../../Variables.scss";
+
+.sp_side_bar_container {
+  .sp_side_bar {
+    background: $main_dark;
+    transition: $main_long_transition;
+
+    @media (min-width: 992px) {
+      position: fixed;
+      height: 100vh;
+    }
+
+    ul {
+      h2 {
+        color: $main_pink;
+      }
+      .active {
+        background: rgba(255, 255, 255, 0.08);
+        color: #e95a63;
+        i {
+          color: rgba(245, 245, 245, 0.5);
+        }
+      }
+      a {
+        font-size: 18px;
+        color: white;
+        background: transparent;
+        transition: $main_transition;
+        &:not(.active):hover {
+          background: rgba(255, 255, 255, 0.02);
+          color: rgba(245, 245, 245, 0.5);
+        }
+        i {
+          font-size: 15px;
+        }
+      }
+    }
+    hr {
+      color: rgba(255, 255, 255, 0.4);
+      width: 90%;
+      margin-right: auto;
+      margin-left: auto;
+    }
+  }
+}

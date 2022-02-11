@@ -1,0 +1,381 @@
+@import "../../Variables.scss";
+
+// animations
+@keyframes to_bottom {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateY(100%) translateX(-50%);
+  }
+}
+@keyframes to_top {
+  from {
+    transform: translateY(100%) translateX(-50%);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+@keyframes sk-bounce {
+  0%,
+  100% {
+    transform: scale(0);
+    -webkit-transform: scale(0);
+  }
+  50% {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+  }
+}
+
+.sp_empty_container_long {
+  height: 150vh;
+
+  .sp_empty {
+    background-color: rgba(0, 0, 0, 0.2);
+    ul {
+      li {
+        margin-bottom: 8px;
+        font-size: 17px;
+        font-weight: lighter;
+      }
+    }
+  }
+}
+.sp_empty_container {
+  height: 120vh;
+  overflow: hidden;
+
+  .sp_empty {
+    background-color: rgba(0, 0, 0, 0.2);
+    ul {
+      li {
+        margin-bottom: 8px;
+        font-size: 17px;
+        font-weight: lighter;
+      }
+    }
+    a {
+      background: $main_pink;
+      transition: $main_transition;
+      opacity: 0.8;
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+}
+// empty result end
+
+// loading
+.loading_container {
+  background: #444444;
+  height: 1000px;
+
+  .spinner {
+    width: 40px;
+    height: 40px;
+    position: relative;
+    margin: 100px auto;
+
+    .double-bounce1,
+    .double-bounce2 {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      background-color: #fffffff3;
+      opacity: 0.6;
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      -webkit-animation: sk-bounce 2s infinite ease-in-out;
+      animation: sk-bounce 2s infinite ease-in-out;
+    }
+
+    .double-bounce2 {
+      animation-delay: -1s;
+    }
+  }
+}
+
+// cards
+.sp_movies {
+  background: #444444;
+
+  // main part start
+  .sp_main_content.sp_main_short {
+    height: 200vh;
+    overflow: hidden;
+  }
+  .sp_main_content {
+    // the main title
+    .sp_main_title {
+      font-size: 50px;
+    }
+
+    // the apologize text
+    .apologize_text {
+      background: rgba(255, 255, 255, 0.1);
+      border: 2px solid #ffff;
+      text-align: justify;
+
+      p {
+        button {
+          background: $main_pink;
+          color: #ffff;
+          font-size: 20px;
+          transition: $main_transition;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+
+    // cards start
+    .sp_cards_container {
+      .sp_card {
+        border-radius: 10px;
+        box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.5) !important;
+        transition: $main_long_transition;
+        &:hover {
+          box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.9) !important;
+          .movie_detail {
+            background: black;
+            color: white;
+            .movie_detail_top {
+              .movie_detail_top_text {
+                a {
+                  color: white;
+                  &:hover {
+                    text-decoration: underline;
+                  }
+                }
+              }
+            }
+            .movie_detail_end {
+              i {
+                color: white;
+              }
+              .remove {
+                color: $main_pink;
+              }
+              .more_info_btn {
+                color: white;
+              }
+            }
+          }
+          .movie_shadow {
+            &::after {
+              opacity: 1;
+            }
+          }
+        }
+
+        // movie detail start
+        .movie_detail {
+          border-top-left-radius: 10px;
+          border-bottom-left-radius: 10px;
+          @media (max-width: 1199px) {
+            border-radius: 10px;
+          }
+          background: white;
+          color: black;
+          transition: $main_long_transition;
+
+          .movie_detail_top {
+            .movie_detail_top_img {
+              overflow: hidden;
+              background: url("https://www.exeter.ox.ac.uk/file/2022/01/image-placeholder.jpg") no-repeat center;
+              background-size: cover;
+              @media (min-width: 1101px) and (max-width: 1199px) {
+                height: 960px;
+              }
+              @media (min-width: 992px) and (max-width: 1100px) {
+                height: 880px;
+              }
+              @media (min-width: 900px) and (max-width: 992px) {
+                height: 900px;
+              }
+              @media (min-width: 800px) and (max-width: 900px) {
+                height: 830px;
+              }
+              @media (min-width: 768px) and (max-width: 800px) {
+                height: 770px;
+              }
+              @media (min-width: 700px) and (max-width: 768px) {
+                height: 950px;
+              }
+              @media (min-width: 600px) and (max-width: 700px) {
+                height: 850px;
+              }
+              @media (min-width: 500px) and (max-width: 600px) {
+                height: 700px;
+              }
+              @media (min-width: 400px) and (max-width: 500px) {
+                height: 560px;
+              }
+              @media (min-width: 350px) and (max-width: 400px) {
+                height: 430px;
+              }
+              @media (min-width: 300px) and (max-width: 350px) {
+                height: 405px;
+              }
+              @media (min-width: 250px) and (max-width: 300px) {
+                height: 330px;
+              }
+            }
+            .movie_detail_top_text {
+              a {
+                text-decoration: none;
+                color: $main_dark;
+                transition: $main_long_transition;
+              }
+              p {
+                font-size: 18px;
+                opacity: 0.6;
+              }
+              .movie_detail_top_imdb {
+                span {
+                  &:not(:last-child) {
+                    opacity: 0.7;
+                    font-size: 17px;
+                    font-weight: bold;
+                  }
+                  &:not(:first-child) {
+                    background: $main_imdb;
+                    color: white;
+                    font-weight: bold;
+                    font-size: 13px;
+                    border-radius: 3px;
+                  }
+                }
+              }
+            }
+          }
+          .movie_detail_center {
+            p {
+              opacity: 0.9;
+            }
+          }
+          .movie_detail_end {
+            button {
+              transition: $main_transition;
+              i {
+                transition: $main_transition;
+              }
+              &:hover {
+                filter: brightness(50%);
+              }
+            }
+            .more_info_btn {
+              opacity: 0.6;
+              right: 50%;
+              transition: $main_transition;
+              &:hover {
+                background: $main_pink;
+                opacity: 1;
+                color: white;
+              }
+              @media (max-width: 1199px) {
+                right: 0;
+              }
+            }
+          }
+        }
+
+        // the shadow start
+        .movie_shadow {
+          background: linear-gradient(to left, rgba(0, 0, 0, 0), 50%, rgb(255, 255, 255));
+          width: 35vh;
+          &::after {
+            content: "";
+            background: linear-gradient(to left, rgba(0, 0, 0, 0), rgb(0, 0, 0));
+            position: absolute;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            width: 60vh;
+            opacity: 0;
+            transition: $main_long_transition;
+          }
+        }
+
+        // movie poster start
+        .movie_poster {
+          background: rgba(190, 190, 190, 0.315);
+          border-radius: 10px;
+          background: url("https://www.exeter.ox.ac.uk/file/2022/01/image-placeholder.jpg") no-repeat center;
+          background-size: cover;
+          img {
+            border-radius: 10px;
+            transition: $main_long_transition;
+          }
+        }
+      }
+    }
+    // cards end
+
+    // pagination start
+    .pagination_container {
+      button:disabled {
+        color: white;
+      }
+      button:enabled {
+        background: #bbbbbb;
+        color: black;
+        border-radius: 10px;
+        transition: $main_transition;
+        &:hover {
+          color: black;
+          filter: brightness(70%);
+        }
+      }
+      .pagination_nums {
+        .active {
+          filter: brightness(70%);
+        }
+      }
+    }
+    // pagination end
+
+    // cleare list btn start
+    .clear_list {
+      color: #ffff;
+      background: $main_pink;
+      border-radius: 4px;
+      opacity: 0.75;
+      transition: $main_long_transition;
+      &:hover {
+        border-radius: 8px;
+        opacity: 1;
+      }
+    }
+    // cleare list btn end
+  }
+  // main part end
+
+  // back to top btn
+  .sp_to_top {
+    transform: translateX(-50%);
+    font-size: 18px;
+    background: black;
+    color: white;
+    opacity: 0.45;
+    border-radius: 0;
+    border-top-right-radius: 50px;
+    border-top-left-radius: 50px;
+    transition: $main_transition;
+    animation: to_bottom 0.5s ease forwards;
+    &:hover {
+      opacity: 0.8;
+      color: white;
+    }
+  }
+  .sp_to_top.active {
+    animation: to_top 0.5s ease forwards;
+  }
+}

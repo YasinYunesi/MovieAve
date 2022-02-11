@@ -1,0 +1,80 @@
+@import "../../Variables.scss";
+
+.md_right {
+  .md_title {
+    color: rgba(255, 255, 255, 0.75);
+  }
+
+  .md_right_movies {
+    // a single movie card
+    .md_right_movie {
+      transition: $main_transition;
+      &:hover {
+        .md_right_backdrop {
+          background: rgba(0, 0, 0, 0.5);
+          transform: scale(1.1);
+        }
+        h6 {
+          transform: scale(1.1);
+        }
+      }
+
+      // the backdrop
+      .md_right_backdrop {
+        border-radius: 8px;
+        background: rgba(0, 0, 0, 0.2);
+        transition: $main_transition;
+      }
+
+      .md_right_img {
+        border-radius: 8px;
+        background: url("https://www.exeter.ox.ac.uk/file/2022/01/image-placeholder.jpg") no-repeat center;
+        background-size: cover;
+        @media (min-width: 1400px) {
+          height: 155px;
+        }
+        @media (min-width: 1200px) and (max-width: 1400px) {
+          height: 295px;
+        }
+        @media (min-width: 1100px) and (max-width: 1200px) {
+          height: 525px;
+        }
+        @media (min-width: 1000px) and (max-width: 1100px) {
+          height: 475px;
+        }
+        @media (min-width: 900px) and (max-width: 1000px) {
+          height: 425px;
+        }
+        @media (min-width: 800px) and (max-width: 900px) {
+          height: 375px;
+        }
+        @media (min-width: 700px) and (max-width: 800px) {
+          height: 337px;
+        }
+        @media (min-width: 600px) and (max-width: 700px) {
+          height: 300px;
+        }
+        @media (min-width: 500px) and (max-width: 600px) {
+          height: 250px;
+        }
+        @media (min-width: 400px) and (max-width: 500px) {
+          height: 200px;
+        }
+        @media (min-width: 300px) and (max-width: 400px) {
+          height: 150px;
+        }
+        @media (min-width: 250px) and (max-width: 300px) {
+          height: 112px;
+        }
+
+        img {
+          border-radius: 8px;
+        }
+      }
+      h6 {
+        z-index: 10;
+        transition: $main_long_transition;
+      }
+    }
+  }
+}

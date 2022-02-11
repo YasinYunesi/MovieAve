@@ -1,0 +1,83 @@
+@import "../Variables.scss";
+
+.profile_screen {
+  background: $main_dark;
+  padding-bottom: 15vh;
+
+  // navbar
+  .costum_navbar {
+    &:hover {
+      background: transparent;
+    }
+  }
+
+  .profile_screen_inner {
+    // the title
+    h1 {
+      font-size: 3.5rem;
+      border-bottom: 1.5px solid rgba(92, 92, 92, 0.25);
+      color: white;
+    }
+
+    // profile image
+    .profile_avatar {
+      width: 25%;
+      @media screen and (min-width: 991px) {
+        width: 15%;
+      }
+    }
+    .profile_email {
+      color: rgba(255, 255, 255, 0.5);
+      background: rgb(102, 102, 102);
+    }
+
+    // plans
+    .profile_plans {
+      h4 {
+        border-bottom: 1.5px solid rgba(92, 92, 92, 0.25);
+        span {
+          font-size: 21px;
+          opacity: 0.8;
+        }
+      }
+      .profile_date {
+        opacity: 0.5;
+      }
+      .profile_plan {
+        h5 {
+          opacity: 0.75;
+        }
+        span {
+          opacity: 0.75;
+        }
+        .profile_subscribe {
+          background: #e50914;
+          font-size: 15px;
+          opacity: 0.7;
+          border-radius: 4px;
+          transition: $main_transition;
+          &:hover {
+            opacity: 1;
+            border-radius: 0;
+          }
+        }
+        .profile_current {
+          background: gray;
+          border-radius: 2px;
+          transition: $main_transition;
+        }
+      }
+    }
+    // sign out btn
+    a {
+      background: #e50914;
+      font-size: 17.5px;
+      border-radius: 0;
+      transition: $main_transition;
+      opacity: 0.7;
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+}
