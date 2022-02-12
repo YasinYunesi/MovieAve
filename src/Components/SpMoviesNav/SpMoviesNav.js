@@ -54,7 +54,7 @@ const SpMoviesNav = ({ sideHeightHandler, getSearchQuery }) => {
     <nav className='sp_movies_nav navbar navbar-expand d-flex py-0 position-fixed col-12'>
       {/* logo */}
       <Link className='navbar-brand col-4 col-md-3 col-xl-2 text-center mx-0' to='/'>
-        <img className='nav_logo img-fluid col-9 col-md-7' src={"Logo"} alt='logo' />
+        <img className='nav_logo img-fluid col-9 col-md-7' src={Logo} alt='logo' />
       </Link>
 
       {/* search, profile and links */}
