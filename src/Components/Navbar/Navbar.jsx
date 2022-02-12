@@ -23,8 +23,8 @@ const Navbar = ({ position, getSearchQuery }) => {
     <nav className={`costum_navbar ${navBg && "nav_bg"} navbar navbar-expand-lg w-100 text-white ${position}`}>
       <div className='container-fluid ps-4 ps-xl-5'>
         {/* logo */}
-        <Link className='navbar-brand' to='/'>
-          <img className='navbar_logo img-fluid display-3' src={logo} alt='logo' />
+        <Link className='navbar_logo navbar-brand' to='/'>
+          <img className='img-fluid' src={logo} alt='logo' />
         </Link>
         {/* Collapse btn */}
         <button

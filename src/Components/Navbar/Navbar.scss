@@ -48,7 +48,11 @@
   // the logo
   .navbar_logo {
     width: 13rem;
-    transition: $main_long_transition;
+    img {
+      color: rgb(172, 172, 172);
+      font-size: 100%;
+      transition: $main_long_transition;
+    }
   }
 
   // navabr collapse bg

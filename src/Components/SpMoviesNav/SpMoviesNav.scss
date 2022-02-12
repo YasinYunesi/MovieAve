@@ -12,6 +12,12 @@
   background: $main_pink;
   transition: $main_long_transition;
 
+  // logo
+  .nav_logo {
+    color: #ffffff;
+    font-size: 100%;
+  }
+
   // search and profile (collapse)
   .sp_nav_main {
     background: rgba(255, 255, 255, 0.12);
