@@ -138,7 +138,7 @@ const Banner = ({ fetchDataApi, getMovieId }) => {
           </h4>
           <Link
             className='light_btn btn shadow-none mt-4 mt-md-0 ms-md-5 mb-2 px-3 py-2'
-            to={bannerMovie && `/movie-detail/${bannerMovie.id}`}
+            to={(bannerMovie && `/movie-detail/${bannerMovie.id}`) || "/"}
             onClick={() => getMovieId(bannerMovie.id)}
           >
             <i className='fa fa-info-circle me-2'></i>

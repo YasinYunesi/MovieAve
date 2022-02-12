@@ -43,19 +43,12 @@ const MdLeft = ({ cast, reviews }) => {
               {cast1?.map((actor) => {
                 return (
                   <div className='col-3 mx-auto me-4' key={actor.name}>
-                    {actor.profile_path ? (
-                      <div>
-                        <div className='md_cast_img mb-2'>
-                          <img className='w-100 h-100' src={`${baseImgURL}/${actor.profile_path}`} alt='cast pic' />
-                        </div>
-                        <h6>{actor.name}</h6>
+                    <div>
+                      <div className='md_cast_img mb-2'>
+                        <img className='w-100 h-100' src={`${baseImgURL}/${actor.profile_path}`} alt='cast pic' />
                       </div>
-                    ) : (
-                      <div className='md_cast_empty h-100 w-100'>
-                        <p className='p-3 h-75'>No image found !</p>
-                        <h6 className='d-flex align-items-end'>{actor.name}</h6>
-                      </div>
-                    )}
+                      <h6>{actor.name}</h6>
+                    </div>
                   </div>
                 );
               })}
@@ -64,19 +57,12 @@ const MdLeft = ({ cast, reviews }) => {
               {cast2?.map((actor) => {
                 return (
                   <div className='col-3 mx-auto me-4' key={actor.name}>
-                    {actor.profile_path ? (
-                      <div>
-                        <div className='md_cast_img mb-2'>
-                          <img className='w-100 h-100' src={`${baseImgURL}/${actor.profile_path}`} alt='cast pic' />
-                        </div>
-                        <h6>{actor.name}</h6>
+                    <div>
+                      <div className='md_cast_img mb-2'>
+                        <img className='w-100 h-100' src={`${baseImgURL}/${actor.profile_path}`} alt='cast pic' />
                       </div>
-                    ) : (
-                      <div className='md_cast_empty h-100 w-100'>
-                        <p className='p-3 h-75'>No image found !</p>
-                        <h6 className='d-flex align-items-end'>{actor.name}</h6>
-                      </div>
-                    )}
+                      <h6>{actor.name}</h6>
+                    </div>
                   </div>
                 );
               })}
